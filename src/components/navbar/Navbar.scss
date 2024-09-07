@@ -1,3 +1,6 @@
+a{
+  text-decoration: none;
+}
 .navbar {
   display: flex;
   flex-direction: column;
@@ -30,12 +33,10 @@
     .logo {
       font-size: 34px;
       font-weight: bold;
-
       .text {
         font-weight: bold;
         color: #1dbf73; 
       }
-
       .dot {
         font-weight: bold;
         color: #1dbf73;
@@ -47,25 +48,21 @@
       gap: 24px;
       font-family: "Montserrat", sans-serif;
       font-weight: 500;
-
       span {
         white-space: nowrap;
       }
-
       .user {
         display: flex;
         align-items: center;
         gap: 10px;
         cursor: pointer;
         position: relative;
-
         img {
           width: 32px;
           height: 32px;
           border-radius: 50%;
           object-fit: cover;
         }
-
         .options {
           position: absolute;
           top: 50px;
@@ -84,6 +81,10 @@
         }
       }
 
+    .text{
+      text-decoration: none;
+
+    }
       button {
         color: white;
         padding: 10px 20px;
@@ -108,12 +109,25 @@
   }
 
   .menu {
-    width: 1400px;
+    width: 90vw;
     padding: 10px 0px;
     display: flex;
     justify-content: space-between;
     color: gray;
     font-weight: 300;
     font-family: "Montserrat", sans-serif;
+  }
+  .menuLink{
+    text-decoration: none;
+    color: grey;
+    cursor:pointer;
+    transition: all 0.4s linear ;
+  }
+  .menuLink:hover{
+    scale: 1.2;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: #5cb34b;
   }
 }

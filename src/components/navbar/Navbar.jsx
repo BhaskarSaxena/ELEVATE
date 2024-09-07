@@ -113,6 +113,7 @@ function Navbar() {
             </Link>
           </div>
           <hr />
+          
         </>
       )}
     </div>
