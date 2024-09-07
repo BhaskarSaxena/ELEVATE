@@ -22,7 +22,7 @@ function Gigs() {
   return (
     <div className="gigs">
       <div className="container">
-        <span className="breadcrumbs">E.L.E.V.A.T.E. > Graphics & Design ></span>
+        <span className="breadcrumbs">E.L.E.V.A.T.E.  Graphics & Design </span>
         <h1>AI Artists</h1>
         <p>
           Explore the boundaries of art and technology with E.L.E.V.A.T.E.'s AI artists
