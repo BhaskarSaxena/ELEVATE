@@ -42,6 +42,7 @@ passport.use(
       secretOrKey: process.env.JWT_SECRET as string,
     },
     (payload: JwtPayload, done: (error: any, user?: any) => void) => {
+      console.log(payload, "payload");
       try {
         return done(null, payload);
       } catch (error) {

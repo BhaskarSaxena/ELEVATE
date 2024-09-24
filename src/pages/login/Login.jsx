@@ -22,10 +22,9 @@ function Login() {
 
       const data = await response.json();
       if (response.ok) {
-        // Handle success
         console.log("Login successful:", data);
+        localStorage.setItem("token", data.token);
       } else {
-        // Handle error
         console.error("Login failed:", data.message);
       }
     } catch (error) {

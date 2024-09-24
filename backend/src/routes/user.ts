@@ -59,7 +59,7 @@ router.post(
     return res.status(201).json({
       success: true,
       message: "User registered successfully.",
-      token,
+      token: token,
     });
   }),
 );
@@ -81,5 +81,13 @@ router.post(
     });
   },
 );
+
+router.get("/user", authenticateJWT, async (req: Request, res: Response) => {
+  const user = req.user as IUser;
+  const userData = await User.findById(user.id);
+  return res.status(200).json({
+    user: userData,
+  });
+});
 
 export default router;

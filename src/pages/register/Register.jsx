@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./Register.scss";
+import {  useNavigate } from "react-router-dom";
 
 function Registor() {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -32,10 +34,9 @@ function Registor() {
 
       const data = await response.json();
       if (response.ok) {
-        // Handle success
-        console.log("Signup successful:", data);
+        localStorage.setItem("token",data.token);
+        navigate('/')
       } else {
-        // Handle error
         console.error("Signup failed:", data.message);
       }
     } catch (error) {

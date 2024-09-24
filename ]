@@ -28,9 +28,17 @@ function Navbar() {
           Authorization: `Bearer ${token}`,
         },
       })
-        .then((res) => res.json())
         .then((res) => {
-            setUser(res.user);
+          console.log(res);
+          const user = JSON.parse(res).user;
+          setUser(user);
+          console.log(user);
+          if (res.status === 200) {
+            localStorage.setItem("token", JSON.stringify(res.token));
+            setUser(user);
+          } else {
+            localStorage.removeItem("token");
+          }
         });
     }
   }, []);
